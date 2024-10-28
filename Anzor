@@ -5,15 +5,23 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("
 wait(3)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("l'm gay",true)
 
--- pandemonium 
+-- pandemonium
+
 coroutine.wrap(function()
-    while true do
-        wait(math.random(80,120))
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(2)
+ 
+while true do
+ 
+local sctm = math.random(90,100)
+ 
+wait(sctm)
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/PandemoniumProtected.lua"))() 
-    end
+
+end
+
 end)()
+
+--
 
 -- a-90 (vickokokoko)
 
@@ -56,3 +64,114 @@ end
 end
  
 end)()
+
+-- greed
+ 
+coroutine.wrap(function()
+ 
+if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Hotel" then
+ 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+ 
+for _, v in next, game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetDescendants() do
+ 
+    if v.Name == "Painting_Small" then
+ 
+local paintingchance = math.random(1, 10)
+ 
+if paintingchance == 1 then
+ 
+        local a = v:Clone()
+ 
+              a.Parent = v.Parent
+ 
+              a.Canvas.SurfaceGui.ImageLabel.Image = "rbxassetid://11027884157"
+ 
+              a.Canvas.SurfaceGui.ImageLabel.BackgroundTransparency = 1
+ 
+              a.Canvas.SurfaceGui.ImageLabel.BackgroundColor3 = Color3.fromRGB(159, 159, 159)
+ 
+              a.Canvas.SurfaceGui.ImageLabel.ImageTransparency = 0.5
+ 
+              a.Name = "Painting Easter Egg"
+ 
+              local b = a.InteractPrompt
+ 
+b.Triggered:Connect(function()
+ 
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption('This painting is titled "..."',true)
+ 
+function PaintImage(medialink, filename)
+ 
+local url = medialink
+ 
+local FileName = filename
+ 
+if not isfile(FileName..".png") then
+ 
+writefile(FileName..".png", game:HttpGet(url)) 
+ 
+end
+ 
+return (getcustomasset or getsynasset)(FileName..".png")
+ 
+end
+ 
+function CustomPaintImage(medialink, filename)
+ 
+local PaintImagine = Instance.new("ImageLabel")
+ 
+PaintImagine.Image = PaintImage(medialink, filename)
+ 
+PaintImagine.Parent = ImageLabel
+ 
+end
+ 
+CustomPaintImage("https://doors-ideas.fandom.com/wiki/User_blog:Thomas10SHx/Greed%27s_Old_Version?file=Greed.png", "PaintImagine")
+ 
+end)
+ 
+        v:Destroy()
+ 
+end
+ 
+    end
+ 
+ 
+ 
+end
+ 
+end)
+ 
+elseif game:GetService("ReplicatedStorage").GameData.Floor.Value == "Mines" then
+ 
+if isfile("https://doors-ideas.fandom.com/wiki/User_blog:Thomas10SHx/Greed%27s_Old_Version?file=Greed.png") then
+ 
+local pass = readfile("https://doors-ideas.fandom.com/wiki/User_blog:Thomas10SHx/Greed%27s_Old_Version?file=Greed.png")
+ 
+if pass == "PaintImagine" then
+ 
+--[[ monster goes here's spawn ]]--
+ 
+while true do
+ 
+wait(850)
+ 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+ 
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption('Greed did spawn',true)
+loadstring(game:HttpGet("https://pastebin.com/raw/Pq9hGhvB"))()
+ 
+end
+ 
+--[[ ]]--
+ 
+end
+ 
+end
+ 
+end
+ 
+end)()
+ 
+--
