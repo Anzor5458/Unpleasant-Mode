@@ -1,0 +1,58 @@
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Made by Anzor5458",true)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait(1)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("creepy mode",true)
+wait(3)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("l'm gay",true)
+
+-- pandemonium 
+coroutine.wrap(function()
+    while true do
+        wait(math.random(80,120))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(2)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/PandemoniumProtected.lua"))() 
+    end
+end)()
+
+-- a-90 (vickokokoko)
+
+coroutine.wrap(function()
+ 
+while true do
+ 
+local sctm = math.random(90,100)
+ 
+wait(sctm)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/YTBW2f9A"))()
+
+end
+
+end)()
+
+--
+
+-- halt (scary collision in fools)
+ 
+coroutine.wrap(function()
+ 
+if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Fools" then
+ 
+while true do
+ 
+local sctm = math.random(85,95)
+ 
+wait(sctm)
+ 
+require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+ 
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+ 
+end
+ 
+--[[ ]]--
+ 
+end
+ 
+end)()
