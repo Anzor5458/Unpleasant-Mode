@@ -1,7 +1,7 @@
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Made by Anzor5458",true)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait(1)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("creepy mode",true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Unpleasant mode",true)
 wait(3)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("l'm gay",true)
 
